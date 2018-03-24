@@ -1,0 +1,130 @@
+.t-a-c {
+    text-align: center;
+}
+.d-f {
+    display: flex;
+}
+.fxd-c {
+    flex-direction: column;
+}
+.s-i {
+    justify-content: space-between;
+}
+.f-e {
+    justify-content: flex-end;
+}
+.t-a-r{
+    text-align: right;
+}
+.w-100px {
+    width: 100px 
+}
+.op:hover{
+    opacity: 0.5;
+}
+.mt-20px {
+    margin-top: 20px;
+}
+.mb-20px{
+    margin-bottom: 20px;
+}
+.mb-500px{
+    margin-bottom: 500px
+}
+.ml-20px {
+    margin-left: 20px;
+}
+.ml-a {
+    margin-left: auto;
+}
+.mr-20px {
+    margin-right: 20 px;
+}
+.mr-a {
+    margin-right: auto;
+}
+.mt-100px {
+    margin-top: 100px;
+}
+.fpo {
+    font-family: 'Poiret One', sans-serif;
+}
+.fs-100px {
+    font-size: 6.25rem; 
+}
+.fs-20px {
+    font-size: 1.25rem;
+}
+.fs-25px {
+    font-size: 25px;
+}
+.fs-45px {
+    font-size: 2.5rem;
+}
+.space-around {
+    justify-content: space-around;
+}
+.center {
+    justify-content: center;
+}
+.pad-15px {
+    padding: 0px 15px 0 0;
+}
+.pad-20px {
+    padding: 20px 0 0 0;
+}
+.pad-40px {
+    padding: 40px 0 0 0;
+}
+.pad-30px {
+    padding: 30 30 30 30;
+}
+.b-s {
+    border: solid;
+}
+.b-w {
+    border-width: thin;
+}
+.border-box {
+    box-sizing: border-box;
+}
+.bb-color {
+    background-color: #d3d3d3
+}
+.w-100px {
+    width: 100px;
+}
+.w-175px {
+    width: 175px;
+}
+.w-700px {
+    width: 700px;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+.icons {
+    width:2em;
+    height:2em;
+}
+.resume {
+    width:20.5em;
+    height:28em;
+}
+
+
+.path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: dash 20s linear infinite; 
+  }
+  
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }

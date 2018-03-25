@@ -16,7 +16,8 @@ $.ajax({
     method: 'GET'
   }).then(function(response) {
     console.log(response);
-    $("#js-gifDump").text(JSON.stringify(response));
+    // $(".js-gifDump").text(JSON.stringify(response));
+    $(".js-gifDump").text(JSON.stringify("<img src=" + response + data.images + "/>"));
     gifDisplay();
   });
 
@@ -25,25 +26,25 @@ $.ajax({
 // To display gifs
 function gifDisplay() {
 
-    $("#js-GifButtons").empty();
+    $(".js-GifButtons").empty();
 
     for (var i = 0; i < moods.length; i++) {
     
     var button = $("<button>");
-    button.addClass("newGif");
+    button.addClass("moodChoice");
     button.attr("gif-name", moods[i]);
     button.text(moods[i]);
-    $("#js-GifButtons").append(button);
-            }
-          }
+    $(".js-GifButtons").append(button);
+    }
+}
 
 
  // This function handles events where one button is clicked
- $("#add-mood").on("click", function(event) {
+ $(".add-mood").on("click", function(event) {
     event.preventDefault();
 
     // This line grabs the input from the textbox
-    let gifInput = $("#gif-input").val().trim();
+    let gifInput = $(".gif-input").val().trim();
 
     // Adding the movie from the textbox to our array
     moods.push(gifInput);

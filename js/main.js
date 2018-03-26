@@ -5,10 +5,11 @@ let moods = ["happy", "bummed", "sassy", "dance"]
 
 //API Key: BIfCy45pXxtSMHZmseg1sl3mX3WxDuYV
 
-function showTheGifs() {
+function showTheGifs(){
 
 let moodChoice = $(this).attr("gif-name")
 let queryURL = "https://api.giphy.com/v1/gifs/search?api_key=BIfCy45pXxtSMHZmseg1sl3mX3WxDuYV&q=" + moodChoice + "&limit=25&offset=0&rating=G&lang=en";
+$(".js-gifDump").empty();
 
 //Jquery AJAX call 
 $.ajax({
@@ -16,15 +17,18 @@ $.ajax({
     method: 'GET'
   }).then(function(response) {
     console.log(response);
-    // $(".js-gifDump").text(JSON.stringify(response));
-    $(".js-gifDump").append(response.data.images.url);
-    gifDisplay();
+    //$(".js-gifDump").text(JSON.stringify(response));
+    let data = response.data;
+    for (var i = 0; i < data.length; i++) {
+        var image = $("<img>")
+        image.attr("src", response.data[i].images.original.url);
+        $(".js-gifDump").append(image);
+    }
   });
-
 }
 
 // To display gifs
-function gifDisplay() {
+function buttonDisplay() {
 
     $(".js-GifButtons").empty();
 
@@ -39,7 +43,7 @@ function gifDisplay() {
 }
 
 
- $(".add-mood").on("click", function(event) {
+ $("#add-mood").on("click", function(event) {
     event.preventDefault();
 
     //For getting input
@@ -49,12 +53,15 @@ function gifDisplay() {
     moods.push(gifInput);
     console.log(moods);
 
-    gifDisplay();
+    buttonDisplay();
   });
 
 
+
+
 $(document).on("click", ".moodChoice", showTheGifs);
-    gifDisplay();
+
+buttonDisplay();
 
 
 // end of document ready 

@@ -6,36 +6,37 @@
     <title>Moody Gifs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript"></script>
    
 </head>
 <body>
-    <div class="bg-dig">
-        <h1 class="f-retro">YOUR MOOD IN GIFS</h1>
-        <div>
-            <img src="https://media.giphy.com/media/gZjl1AHk3Txw4/giphy.gif"/>
-            <img src="https://media.giphy.com/media/dRYBjtthrSEEg/giphy.gif"/>
-            <img src="https://media.giphy.com/media/23Z4LOSTaITniquKEz/giphy.gif"/>
+    <div>
+        <div class="t-a-c bg-dig">
+            <h1 class="f-retro fb fs-45px mb-40px">YOUR MOOD IN GIFS</h1>
         </div>
-        <!-- Gif buttons -->
-        <div class="js-GifButtons"></div>
+            <div class="t-a-c op-50 mb-40px"> 
+                <img src="./images/strawberry.gif" height="153px" width="230px"/>
+                <img src="./images/pop.gif" height="153px" width="230px"/>
+                <img src="./images/dog.gif" height="153px" width="230px"/>
+            </div> 
+            <!-- Gif buttons -->
+            <div class="js-GifButtons"></div>
 
-        <!-- Input to add more buttons -->
-        <form class="js-GifForm">
-            <label for="gif-input">What's your mood?</label>
-            <input type="text" class="gif-input">
-            <input id="add-mood" type="submit" value="Add a Mood">
-        </form>
+            <!-- Input to add more buttons -->
+            <form class="js-GifForm">
+                <label class="fb" for="gif-input">What's your mood?</label>
+                <input type="text" class="gif-input">
+                <input id="add-mood" type="submit" value="Add a Mood">
+            </form>
 
-        <!--When a button is pressed, here is where the gifs will go-->
-        <div>
-            <div class="js-gifDump"></div>
-        </div>
-
+            <!--When a button is pressed, here is where the gifs will go-->
+            <div>
+                <div class="js-gifDump"></div>
+            </div>
     </div>
-    
     <script src="./js/main.js"></script>
 </body>
 </html>

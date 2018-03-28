@@ -57,12 +57,23 @@ function buttonDisplay() {
   });
 
 
-
+//add class to gif dump
 
 $(document).on("click", ".moodChoice", showTheGifs);
 
 buttonDisplay();
 
+//on click which will call function for getting gifs to play / pause
+$(".js-gifDump").on("click", function() {
+  let state = $(this).attr("data-state");
+   if (state === "still") {
+     $(this).attr("src", $(this).attr("data-animate"));
+     $(this).attr("data-state", "animate");
+   } else {
+     $(this).attr("src", $(this).attr("data-still"));
+     $(this).attr("data-state", "still");
+}
+});
 
 // end of document ready 
 });

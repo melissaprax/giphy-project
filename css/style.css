@@ -17,6 +17,13 @@
     background-image: repeating-linear-gradient(
     45deg, rgb(230, 104, 104), rgb(230, 104, 104) 15px, white 15px, white 25px)    
 }
+.bg-dig2 {
+    background-image: repeating-linear-gradient(
+    -45deg, rgb(230, 104, 104), rgb(230, 104, 104) 15px, white 15px, white 25px)    
+}
+.bg-salmon {
+    background: rgb(230, 104, 104);
+}
 .button-retro{
     box-sizing: border-box;
     border: 2px solid #04049d;

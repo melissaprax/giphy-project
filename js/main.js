@@ -64,6 +64,7 @@ $(document).on("click", ".moodChoice", showTheGifs);
 buttonDisplay();
 
 //on click which will call function for getting gifs to play / pause
+//tried document . on click - didn't work
 $(".js-gifDump").on("click", function() {
   let state = $(this).attr("data-state");
    if (state === "still") {
